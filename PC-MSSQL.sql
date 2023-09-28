@@ -3,7 +3,7 @@ GO
 if exists (select * from sysdatabases where name='pc')
 	DROP DATABASE pc
 GO
-DROP DATABASE pc
+
 CREATE DATABASE pc
 GO
 USE pc
