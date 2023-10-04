@@ -1,0 +1,54 @@
+USE task9
+
+/*TASK1*/
+CREATE TABLE USERS (
+  ID INT,
+  EMAIL VARCHAR(20),
+  PASSWORD VARCHAR(10),
+  DATE DATETIME
+);
+
+CREATE TABLE FRIENDS (
+  ID1 INT,
+  ID2 INT,
+);
+
+CREATE TABLE WALLS (
+  ID INT,
+  ID_WRITER INT,
+  TEXT CHAR(50),
+  DATE DATETIME
+);
+
+CREATE TABLE GROUPS (
+  ID_GROUP INT,
+  NAME VARCHAR(10),
+  DESCRIPTION VARCHAR(50) DEFAULT ' '
+);
+
+CREATE TABLE GROUP_MEMBERS (
+  ID_GROUP INT,
+  ID_USER INT
+);
+
+/*TASK2*/
+INSERT INTO USERS (ID,EMAIL,PASSWORD,DATE)
+  VALUES (1, 'ddw@gmail.com', '123456789', 2020-02-02),
+  (2, 'sww@gmail.com', '147258369', 2020-12-02),
+  (3, 'fgg@gmail.com', '785214569', 2020-02-12),
+  (4, 'wqq@gmail.com', '789654748', 2020-05-05),
+  (5, 'jjj@gmail.com', '125478963', 2020-05-02);
+
+INSERT INTO FRIENDS  VALUES (1,2),
+							(3,4),
+							(4,1),
+							(5,4);
+
+INSERT INTO WALLS  VALUES (1,2,'kkfkfkfkf', 2020-12-03);
+
+INSERT INTO GROUPS  VALUES (1,'tup i um','nz brat');
+
+INSERT INTO GROUP_MEMBERS  VALUES (1,1),
+									(1,2),
+									(1,3),
+									(1,5);
