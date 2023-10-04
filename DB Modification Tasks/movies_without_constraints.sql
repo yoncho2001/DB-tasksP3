@@ -1,12 +1,12 @@
 USE master
 GO
-if exists (select * from sysdatabases where name='movies')
-	DROP DATABASE movies
+if exists (select * from sysdatabases where name='movies_without_constraints')
+	DROP DATABASE movies_without_constraints
 GO
 
-CREATE DATABASE movies
+CREATE DATABASE movies_without_constraints
 GO
-USE movies
+USE movies_without_constraints
 GO
 
 ----- Create Tables -----

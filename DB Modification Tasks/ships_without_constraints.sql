@@ -1,12 +1,12 @@
 USE master
 GO
-if exists (select * from sysdatabases where name='ships')
-	DROP DATABASE ships
+if exists (select * from sysdatabases where name='ships_without_constraints')
+	DROP DATABASE ships_without_constraints
 GO
 
-CREATE DATABASE ships
+CREATE DATABASE ships_without_constraints
 GO
-USE ships
+USE ships_without_constraints
 GO
 
 ----- Tables -----
