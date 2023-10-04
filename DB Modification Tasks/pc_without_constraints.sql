@@ -1,12 +1,12 @@
 USE master
 GO
-if exists (select * from sysdatabases where name='pc')
-	DROP DATABASE pc
+if exists (select * from sysdatabases where name='pc_without_constraints')
+	DROP DATABASE pc_without_constraints
 GO
 
-CREATE DATABASE pc
+CREATE DATABASE pc_without_constraints
 GO
-USE pc
+USE pc_without_constraints
 GO
 
 CREATE TABLE laptop(
