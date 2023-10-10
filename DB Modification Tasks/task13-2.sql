@@ -34,7 +34,7 @@ WHERE model IN (
 SELECT hd,min(price)as min_prise
 FROM pc
 WHERE hd>=10 
-and hd<=10
+and hd<=30
 group by hd
 
 SELECT *
